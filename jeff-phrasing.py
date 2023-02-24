@@ -96,12 +96,15 @@ STARTERS = {
 
 SIMPLE_STARTERS = {
     "STHA": (" that", None),
+    "STHAO": (" so that", None),
     "STPA": (" if", None),
     "SWH": (" when", None),
     "SWHA": (" what", None),
     "SWHR": (" where", None),
     "SWHO": (" who", None),
     "STKWH": (" why", None),
+    "SPWH": (" but", None),
+    "SKPR": (" because", None),
 
     # Remove the entry below if you don't want "and" phrases.
     "SKP": (" and", None),
@@ -186,9 +189,9 @@ STRUCTURE_EXCEPTIONS = {
 
     # - empty starter word structures
     "STWRUF": ("just", False, None),
-    "STWR*UF": ("just don't", True, None),
+    "STWR*UF": ("don't just", True, None),
     "STKPWHRUF": ("just", False, None),
-    "STKPWHR*UF": ("just doesn't", True, None),
+    "STKPWHR*UF": ("doesn't just", True, None),
 
     "STWREU": ("still", False, None),
     "STWR*EU": ("still don't", True, None),
@@ -214,14 +217,14 @@ STRUCTURES = {
     "*F": ({tense: {form: "!*" + TO_HAVE[tense][form] for form in TO_HAVE[tense]} for tense in TO_HAVE}, True, "past-participle"),
     "F": ({tense: {form: "!*" + TO_HAVE[tense][form] for form in TO_HAVE[tense]} for tense in TO_HAVE}, True, "past-participle"),
 
-    "*EU": ("! still*", True, None),
+    "*EU": ("!* still", True, None),
     "EU": ("!* still", True, None),
     "*EUF": ("!* even", True, None),
     "EUF": ("!* never", True, None),
 
     "*U": ({"present": ALWAYS, "past": ALWAYS}, True, None),
     "U": ({"present": ALWAYS, "past": ALWAYS}, True, None),
-    "*UF": ("! just*", True, None),
+    "*UF": ("!* just", True, None),
     "UF": ("!* just", True, None),
 } 
 
