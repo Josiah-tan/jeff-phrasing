@@ -55,6 +55,7 @@ THERE_SUFFIXES = {
     "LZ": True, "TZD": True,                                  # Live
     "PL": True, "PLT": True, "PLD": True, "PLTD": True,       # May (have)
     "PBLGS": True, "PBLGTS": True,                            # Must (have)
+    "PBLGSZ": True, "PBLGTSDZ": True,                         # Just 
     "RPG": True, "RPGD": True, "RPGT": True, "RPGTD": True,   # Need (to)
     "RLG": True, "RLGD": True,                                # Really
     "PLS": True, "PLSZ": True, "PLTS": True, "PLTSDZ": True,  # Seem (to)
@@ -107,7 +108,8 @@ SIMPLE_STARTERS = {
     "SKPR": (" because", None),
 
     # Remove the entry below if you don't want "and" phrases.
-    "SKP": (" and", None),
+    # "SKP": (" and", None),
+    "SKPH": (" and", None),
 }
 
 SIMPLE_PRONOUNS = {
@@ -346,7 +348,22 @@ ENDERS = {
     "PLGT": ("present", {None: " imagine that", "3ps": " imagines that", "present-participle": " imagining that", "past-participle": " imagined that"}),
     "PLGD": ("past", {None: " imagined", "root": " imagine", "present-participle": " imagining", "past-participle": " imagined"}),
     "PLGTD": ("past", {None: " imagined that", "root": " imagine that", "present-participle": " imagining that", "past-participle": " imagined that"}),
+    
+    # PBLGSZ - Just
+    "PBLGSZ": ("present", " just"),
+    "PBLGTSDZ": ("past", " just"),
 
+    # RPBGS - ever
+    "RPBGS": ("present", " ever"),
+    
+    # RPLTS - matter 
+    "RPLTS": ("present", {None: " matter", "3ps": " matters"}),
+    "RPLTSDZ": ("past",  " mattered"),
+
+    # recollect
+    "RBLGS": ("present", {None: " recollect", "3ps": " recollects", "present-participle": " recollecting", "past-participle": " recollected"}),
+    "RBLGSZ": ("past", " recollected"),
+    
     # PBGS - To keep
     "PBGS": ("present", {None: " keep", "3ps": " keeps", "present-participle": " keeping", "past-participle": " kept"}),
     "PBGSZ": ("past", {None: " kept", "root": " keep", "present-participle": " keeping", "past-participle": " kept"}),
