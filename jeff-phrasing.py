@@ -7,7 +7,7 @@ import re
 LONGEST_KEY = 1
 
 PARTS_MATCHER = re.compile(
-    r'(\^?S?T?K?P?W?H?R?)(A?O?)-?(\*?)(E?U?)(F?)(R?P?B?L?G?T?S?D?Z?)'
+    r'(\+?\^?\#?)(S?T?K?P?W?H?R?)(A?O?)-?(\*?)(E?U?)(F?)(R?P?B?L?G?T?S?D?Z?)'
 )
 
 TO_BE = {
@@ -91,12 +91,24 @@ STARTERS = {
     "STWH": ("that", "3ps", None),
     "STHR": ("there", "3ps", THERE_SUFFIXES),
     "STPHR": ("there", "3pp", THERE_SUFFIXES),
+
+    "^SWR": ("as I", "1ps", None),
+    "^KPWR": ("as you", "2p", None),
+    "^KWHR": ("as he", "3ps", None),
+    "^SKWHR": ("as she", "3ps", None),
+    "^KPWH": ("as it", "3ps", None),
+    "^TWR": ("as we", "1pp", None),
+    "^TWH": ("as they", "3pp", None),
+    "^STKH": ("as this", "3ps", None),
+    "^STWH": ("as that", "3ps", None),
+    "^STHR": ("as there", "3ps", THERE_SUFFIXES),
+    "^STPHR": ("as there", "3pp", THERE_SUFFIXES),
     "STKPWHR": ("", "b3ps", None),
     "STWR": ("", "b3pp", None),
 }
 
 SIMPLE_STARTERS = {
-    "^S": (" as", None),
+    # "^S": (" as", None),
     "STHA": (" that", None),
     "STHAO": (" so that", None),
     "STPA": (" if", None),
@@ -117,12 +129,12 @@ SIMPLE_STARTERS = {
 
 SIMPLE_PRONOUNS = {
     "E": ("he", "3ps", None),
-    "*E": ("she", "3ps", None),
+    "^E": ("she", "3ps", None),
     "U": ("you", "2p", None),
-    "*U": ("they", "3pp", None),
+    "^U": ("they", "3pp", None),
     "EU": ("I", "1ps", None),
-    "*EU": ("we", "1pp", None),
-    "*": ("it", "3ps", None),
+    "^EU": ("we", "1pp", None),
+    "^": ("it", "3ps", None),
 }
 
 SIMPLE_STRUCTURES = {
@@ -603,7 +615,7 @@ def determine_parts(stroke):
         raise KeyError
 
     match = PARTS_MATCHER.match(stroke)
-    starter_key, v1, star, v2, f, ender_key = match.groups()
+    pinky, starter_key, v1, star, v2, f, ender_key = match.groups()
     if not match:
         raise KeyError
 
@@ -613,13 +625,13 @@ def determine_parts(stroke):
 
     # Check short form first.
     simple_starter_lookup = SIMPLE_STARTERS.get(starter_key + v1)
-    simple_pronoun_lookup = SIMPLE_PRONOUNS.get(star + v2)
+    simple_pronoun_lookup = SIMPLE_PRONOUNS.get(pinky + v2)
     if simple_starter_lookup and simple_pronoun_lookup:
         simple_structure = SIMPLE_STRUCTURES[f]
         return simple_pronoun_lookup, simple_starter_lookup, simple_structure, ender_lookup
 
     # Full form lookup.
-    starter_lookup = STARTERS.get(starter_key)
+    starter_lookup = STARTERS.get(pinky + starter_key)
     if not starter_lookup:
         raise KeyError
 
