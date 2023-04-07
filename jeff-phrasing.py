@@ -129,6 +129,7 @@ SIMPLE_STARTERS = {
 }
 
 SIMPLE_PRONOUNS = {
+    "": ("", "b3ps", None),
     "E": ("he", "3ps", None),
     "^E": ("she", "3ps", None),
     "U": ("you", "2p", None),
@@ -642,7 +643,7 @@ def lookup(key):
     if ending == None:
         raise KeyError
 
-    return middle_phrase + ending
+    return (middle_phrase + ending).replace("  ", " ")
 
 def determine_parts(stroke):
     if stroke in NON_PHRASE_STROKES:
