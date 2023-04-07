@@ -563,10 +563,10 @@ ENDERS = {
     "TDZ": ("past", " used to"),
 
     # P: To want (to)
-    "P": ("present", {None: " want", "3ps": " wants", "present-participle": " wanting", "past-participle": " wanted"}),
-    "PT": ("present", {None: " want to", "3ps": " wants to", "present-participle": " wanting to", "past-participle": " wanted to"}),
-    "PD": ("past", {None: " wanted", "root": " want", "present-participle": " wanting", "past-participle": " wanted"}),
-    "PTD": ("past", {None: " wanted to", "root": " want to", "present-participle": " wanting to", "past-participle": " wanted to"}),
+    "P": ("present", {None: " want", "3ps": " wants", "present-participle": " wanted", "past-participle": " wanted"}),
+    "PT": ("present", {None: " want to", "3ps": " wants to", "present-participle": " wanted to", "past-participle": " wanted to"}),
+    "PD": ("past", {None: " wanted", "root": " want", "present-participle": " wanted", "past-participle": " wanted"}),
+    "PTD": ("past", {None: " wanted to", "root": " want to", "present-participle": " wanted to", "past-participle": " wanted to"}),
 
     # RBGS - will - Auxiliary verb
     # These do not combine naturally with middle/structures.
