@@ -585,6 +585,33 @@ ENDERS = {
     "RBGTD": ("past", {None: " worked on", "root": " work on", "present-participle": " working on", "past-participle": " worked on"}),
 }
 
+NEGATIVE_ENDERS = {
+    # *BGS - can't - Auxiliary verb
+    # These do not combine naturally with middle/structures.
+    "*BGS": ("present", " can't"),
+    "*BGSZ": ("past", " couldn't"),
+
+    # *RBGS - won't - Auxiliary verb
+    # These do not combine naturally with middle/structures.
+    "*RBGS": ("present", " won't"),
+    "*RBGSZ": ("past", " wouldn't"),
+
+    # *RP - don't
+    "*RP": ("present", {None: " don't", "3ps": " doesn't"}),
+    "*RPD": ("past", {None: " didn't", "root": " didn't"}),
+
+    # *RPBGS - ever
+    "*RPBGS": ("present", " never"),
+
+    # *PL - Auxiliary verb may not (be)
+    # These do not combine naturally with middle/structures.
+    "*PL": ("present", " may not"),
+    "*PLT": ("present", " may not be"),
+    "*PLD": ("past", " might not"),
+    "*PLTD": ("past", " might not be"),
+
+        }
+
 
 def lookup(key):
     starter_lookup, middle_lookup, structure_lookup, ender_lookup = determine_parts(key[0])
@@ -619,8 +646,9 @@ def determine_parts(stroke):
     if not match:
         raise KeyError
 
+    star_ender_lookup = NEGATIVE_ENDERS.get(star + ender_key)
     ender_lookup = ENDERS.get(ender_key)
-    if not ender_lookup:
+    if not ender_lookup and not star_ender_lookup:
         raise KeyError
 
     # Check short form first.
@@ -628,7 +656,10 @@ def determine_parts(stroke):
     simple_pronoun_lookup = SIMPLE_PRONOUNS.get(pinky + v2)
     if simple_starter_lookup and simple_pronoun_lookup:
         simple_structure = SIMPLE_STRUCTURES[f]
-        return simple_pronoun_lookup, simple_starter_lookup, simple_structure, ender_lookup
+        if star_ender_lookup:
+            return simple_pronoun_lookup, simple_starter_lookup, simple_structure, star_ender_lookup
+        elif star == "":
+            return simple_pronoun_lookup, simple_starter_lookup, simple_structure, ender_lookup
 
     # Full form lookup.
     starter_lookup = STARTERS.get(pinky + starter_key)
