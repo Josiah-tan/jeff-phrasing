@@ -109,6 +109,7 @@ STARTERS = {
 
 SIMPLE_STARTERS = {
     # "^S": (" as", None),
+    "WHRAO": (" whether or not", None),
     "STHA": (" that", None),
     "STHAO": (" so that", None),
     "STPA": (" if", None),
@@ -678,6 +679,8 @@ def determine_parts(stroke):
     if not structure_lookup:
         structure_lookup = STRUCTURES[star + v2 + f]
 
+    if star_ender_lookup and v1 == "":
+        return starter_lookup, ("", ""), structure_lookup, star_ender_lookup
     return starter_lookup, middle_lookup, structure_lookup, ender_lookup
 
 
