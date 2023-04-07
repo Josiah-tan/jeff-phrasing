@@ -679,7 +679,7 @@ def determine_parts(stroke):
     if not structure_lookup:
         structure_lookup = STRUCTURES[star + v2 + f]
 
-    if star_ender_lookup and v1 == "":
+    if star_ender_lookup and v1 == "" and (star + ender_key not in {"*RP", "*RPD"}):
         return starter_lookup, ("", ""), structure_lookup, star_ender_lookup
     return starter_lookup, middle_lookup, structure_lookup, ender_lookup
 
