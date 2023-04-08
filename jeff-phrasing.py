@@ -446,9 +446,11 @@ ENDERS = {
 
     # PBLS - To mind (at all)
     "PBLS": ("present", {None: " mind", "3ps": " minds", "present-participle": " minding", "past-participle": " minded"}),
-    "PBLTS": ("present", {None: " mind at all", "3ps": " minds at all", "present-participle": " minding at all", "past-participle": " minded at all"}),
     "PBLSZ": ("past", {None: " minded", "root": " mind", "present-participle": " minding", "past-participle": " minded"}),
-    "PBLTSDZ": ("past", {None: " minded at all", "root": " mind at all", "present-participle": " minding at all", "past-participle": " minded at all"}),
+
+    # PBLTS - to not
+    "PBLTS": ("present", {None: " not", "3ps": " not", "present-participle": " not", "past-participle": " not"}),
+    "PBLTSDZ": ("past", {None: " not", "3ps": " not", "present-participle": " not", "past-participle": " not"}),
 
     # PLZ - To move
     "PLZ": ("present", {None: " move", "3ps": " moves", "present-participle": " moving", "past-participle": " moved"}),
