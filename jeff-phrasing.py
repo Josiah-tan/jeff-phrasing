@@ -620,6 +620,10 @@ NEGATIVE_ENDERS = {
     "*PLD": ("past", " might not"),
     "*PLTD": ("past", " might not be"),
 
+    # *RBL - shall - Auxiliary verb
+    # These do not combine naturally with middle/structures.
+    "*RBL": ("present", " shall not"),
+    "*RBLD": ("past", " shouldn't"),
         }
 
 
