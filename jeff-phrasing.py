@@ -610,7 +610,7 @@ NEGATIVE_ENDERS = {
     "*RP": ("present", {None: " don't", "3ps": " doesn't"}),
     "*RPD": ("past", {None: " didn't", "root": " didn't"}),
 
-    # *RPBGS - ever
+    # *RPBGS - never
     "*RPBGS": ("present", " never"),
 
     # *PL - Auxiliary verb may not (be)
@@ -620,10 +620,16 @@ NEGATIVE_ENDERS = {
     "*PLD": ("past", " might not"),
     "*PLTD": ("past", " might not be"),
 
-    # *RBL - shall - Auxiliary verb
+    # *RBL - shall not - Auxiliary verb
     # These do not combine naturally with middle/structures.
     "*RBL": ("present", " shall not"),
     "*RBLD": ("past", " shouldn't"),
+
+    # *B: aren't (a)
+    "*B": ("present", {None: " aren't", "1ps": " am not", "3ps": " isn't"}),
+    "*BT": ("present", {None: " aren't the", "1ps": " am not the", "3ps": " isn't the"}),
+    "*BD": ("past", {None: " weren't", "1ps": " wasn't", "3ps": " wasn't"}),
+    "*BTD": ("past", {None: " weren't the", "1ps": " wasn't the", "3ps": " wasn't the"}),
         }
 
 
