@@ -666,10 +666,19 @@ def determine_parts(stroke):
     simple_pronoun_lookup = SIMPLE_PRONOUNS.get(pinky + v2)
     if simple_starter_lookup and simple_pronoun_lookup:
         simple_structure = SIMPLE_STRUCTURES[f]
-        if star_ender_lookup:
-            return simple_pronoun_lookup, simple_starter_lookup, simple_structure, star_ender_lookup
-        elif star == "":
+        if star == "":
+            # case 0: if you are √
             return simple_pronoun_lookup, simple_starter_lookup, simple_structure, ender_lookup
+        else:
+            if (star + ender_key in {"*RP", "*RPD"} or not star_ender_lookup):
+                # case 1: if you don't know √
+                # case 2: if you don't do √
+                middle_lookup = MIDDLES[star]
+                starter_lookup = (simple_starter_lookup[0] + " " + simple_pronoun_lookup[0], *simple_pronoun_lookup[1:])
+                return starter_lookup, middle_lookup, ('!*', True, None), ender_lookup
+            else:
+                # case 3: if you may not √
+                return simple_pronoun_lookup, simple_starter_lookup, simple_structure, star_ender_lookup
 
     # Full form lookup.
     starter_lookup = STARTERS.get(pinky + starter_key)
