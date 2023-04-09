@@ -112,6 +112,7 @@ SIMPLE_STARTERS = {
     "WHRAO": (" whether or not", None),
     "STHA": (" that", None),
     "STHAO": (" so that", None),
+    "SWHAO": (" so what", None),
     "STPA": (" if", None),
     "SWH": (" when", None),
     "SWHA": (" what", None),
