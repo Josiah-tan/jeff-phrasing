@@ -145,6 +145,11 @@ SIMPLE_STRUCTURES = {
     "F": ({tense: {form: "* !" + TO_HAVE[tense][form] for form in TO_HAVE[tense]} for tense in TO_HAVE}, True, "past-participle"),
 }
 
+SIMPLE_NEGATIVE_STRUCTURES = {
+    "*": ("!*", True, None),
+    "*F": ({"present": {None: "! haven't", "3ps": "! hasn't"}, "past": "! hadn't"}, False, "past-participle"),
+}
+
 MIDDLES = {
     # Map of stroke -> (map[tense][verb-form](string, verb-form)
     "": {"present": {None: (" do", "root"), "3ps": (" does", "root")}, "past": (" did", "root")},
@@ -686,9 +691,13 @@ def determine_parts(stroke):
                 # case 2: if you don't do √
                 middle_lookup = MIDDLES[star]
                 starter_lookup = (simple_starter_lookup[0] + " " + simple_pronoun_lookup[0], *simple_pronoun_lookup[1:])
-                return starter_lookup, middle_lookup, ('!*', True, None), ender_lookup
+                
+                # case 3: so what hasn't √
+                simple_negative_structure = SIMPLE_NEGATIVE_STRUCTURES[star + f]
+                return starter_lookup, middle_lookup, simple_negative_structure, ender_lookup
+                # return starter_lookup, middle_lookup, ('!*', True, None), ender_lookup
             else:
-                # case 3: if you may not √
+                # case 4: if you may not √
                 return simple_pronoun_lookup, simple_starter_lookup, simple_structure, star_ender_lookup
 
     # Full form lookup.
@@ -709,9 +718,9 @@ def determine_parts(stroke):
         structure_lookup = STRUCTURES[star + v2 + f]
 
     if star_ender_lookup and v1 == "" and (star + ender_key not in {"*RP", "*RPD"}):
-        ## case 4 you just won't
+        ## case 5 you just won't
         return starter_lookup, ("", ""), structure_lookup, star_ender_lookup
-    ## case 5 you are being
+    ## case 6 you are being
     return starter_lookup, middle_lookup, structure_lookup, ender_lookup
 
 
