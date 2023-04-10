@@ -628,9 +628,9 @@ NEGATIVE_ENDERS = {
 
     # *B: aren't (a)
     "*B": ("present", {None: " aren't", "1ps": " am not", "3ps": " isn't"}),
-    "*BT": ("present", {None: " aren't the", "1ps": " am not the", "3ps": " isn't the"}),
+    "*BT": ("present", {None: " aren't a", "1ps": " am not a", "3ps": " isn't a"}),
     "*BD": ("past", {None: " weren't", "1ps": " wasn't", "3ps": " wasn't"}),
-    "*BTD": ("past", {None: " weren't the", "1ps": " wasn't the", "3ps": " wasn't the"}),
+    "*BTD": ("past", {None: " weren't a", "1ps": " wasn't a", "3ps": " wasn't a"}),
         }
 
 
