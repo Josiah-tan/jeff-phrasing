@@ -213,20 +213,20 @@ STRUCTURE_EXCEPTIONS = {
     "STKPWHR*U": ("not to", False, "root"),
 
     # - empty starter word structures
-    "STWRUF": ("just", False, None),
-    "STWR*UF": ({"present": "don't just", "past": "didn't just"}, True, None),
-    "STKPWHRUF": ("just", False, None),
-    "STKPWHR*UF": ({"present": "doesn't just", "past": "didn't just"}, True, None),
+    # "STWRUF": ("just", False, None),
+    # "STWR*UF": ({"present": "don't just", "past": "didn't just"}, True, None),
+    # "STKPWHRUF": ("just", False, None),
+    # "STKPWHR*UF": ({"present": "doesn't just", "past": "didn't just"}, True, None),
 
-    "STWREU": ("still", False, None),
+    # "STWREU": ("still", False, None),
     # "STWR*EU": ({"present": "still don't", "past": "still didn't"}, True, None),    
-    "STKPWHREU": ("still", False, None),
+    # "STKPWHREU": ("still", False, None),
     # "STKPWHR*EU": ({"present": "still doesn't", "past": "still didn't"}, True, None),
 
-    "STWREUF": ("never", False, None),
-    "STWR*EUF": ("even", False, None),
-    "STKPWHREUF": ("never", False, None),
-    "STKPWHR*EUF": ("even", False, None),
+    # "STWREUF": ("never", False, None),
+    # "STWR*EUF": ("even", False, None),
+    # "STKPWHREUF": ("never", False, None),
+    # "STKPWHR*EUF": ("even", False, None),
 }
 
 ALWAYS = {None: "* !", "b3ps-root": "* always", "b3pp-root": "* always"}
