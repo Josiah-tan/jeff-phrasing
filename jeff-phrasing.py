@@ -219,9 +219,9 @@ STRUCTURE_EXCEPTIONS = {
     "STKPWHR*UF": ({"present": "doesn't just", "past": "didn't just"}, True, None),
 
     "STWREU": ("still", False, None),
-    "STWR*EU": ({"present": "still don't", "past": "still didn't"}, True, None),    
+    # "STWR*EU": ({"present": "still don't", "past": "still didn't"}, True, None),    
     "STKPWHREU": ("still", False, None),
-    "STKPWHR*EU": ({"present": "still doesn't", "past": "still didn't"}, True, None),
+    # "STKPWHR*EU": ({"present": "still doesn't", "past": "still didn't"}, True, None),
 
     "STWREUF": ("never", False, None),
     "STWR*EUF": ("even", False, None),
