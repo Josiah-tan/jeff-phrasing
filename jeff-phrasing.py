@@ -209,14 +209,14 @@ STRUCTURE_EXCEPTIONS = {
 
     # - empty starter word structures
     "STWRUF": ("just", False, None),
-    "STWR*UF": ("don't just", True, None),
+    "STWR*UF": ({"present": "don't just", "past": "didn't just"}, True, None),
     "STKPWHRUF": ("just", False, None),
-    "STKPWHR*UF": ("doesn't just", True, None),
+    "STKPWHR*UF": ({"present": "doesn't just", "past": "didn't just"}, True, None),
 
     "STWREU": ("still", False, None),
-    "STWR*EU": ("still don't", True, None),
+    "STWR*EU": ({"present": "still don't", "past": "still didn't"}, True, None),    
     "STKPWHREU": ("still", False, None),
-    "STKPWHR*EU": ("still doesn't", True, None),
+    "STKPWHR*EU": ({"present": "still doesn't", "past": "still didn't"}, True, None),
 
     "STWREUF": ("never", False, None),
     "STWR*EUF": ("even", False, None),
@@ -237,7 +237,7 @@ STRUCTURES = {
     "*F": ({tense: {form: "!*" + TO_HAVE[tense][form] for form in TO_HAVE[tense]} for tense in TO_HAVE}, True, "past-participle"),
     "F": ({tense: {form: "!*" + TO_HAVE[tense][form] for form in TO_HAVE[tense]} for tense in TO_HAVE}, True, "past-participle"),
 
-    "*EU": ("!* still", True, None),
+    "*EU": ("! still*", True, None),
     "EU": ("!* still", True, None),
     "*EUF": ("!* even", True, None),
     "EUF": ("!* never", True, None),
