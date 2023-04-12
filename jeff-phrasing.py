@@ -115,6 +115,8 @@ SIMPLE_STARTERS = {
     "STHAO": (" so that", None),
     "SWHAO": (" so what", None),
     "STPA": (" if", None),
+    "SKWO": (" so", None),
+    "STKPWAO": (" so if", None),
     "SWH": (" when", None),
     "SWHA": (" what", None),
     "STPWHA": (" what if", None),
@@ -122,6 +124,8 @@ SIMPLE_STARTERS = {
     "STKPHA": (" and that", None),
     "SWHR": (" where", None),
     "SWHO": (" who", None),
+    "TKWHRO": (" how", None),
+    "STKWHRO": (" so how", None),
     "STKWH": (" why", None),
     "SPWH": (" but", None),
     "SKPHR": (" because", None),
@@ -412,6 +416,18 @@ ENDERS = {
     # LS - To let
     "LS": ("present", {None: " let", "3ps": " lets", "present-participle": " letting", "past-participle": " let"}),
     "LSZ": ("past", {None: " let", "present-participle": " letting", "past-participle": " let"}),
+
+    # LGS - To also
+    "LGS": ("present", " also"),
+    "LGSZ": ("past", " also"),
+
+    # RLGZ - To always
+    "RLGZ": ("present", " always"),
+    "RLGDZ": ("past", " always"),
+
+    # PBLZ - To only
+    "PBLZ": ("present", " only"),
+    "PBLDZ": ("past", " only"),
 
     # BLG - To like (to)
     "BLG": ("present", {None: " like", "3ps": " likes", "present-participle": " liking", "past-participle": " liked"}),
