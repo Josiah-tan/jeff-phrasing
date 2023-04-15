@@ -704,7 +704,7 @@ def determine_parts(stroke):
             # case 0: if you are √
             return simple_pronoun_lookup, simple_starter_lookup, simple_structure, ender_lookup
         else:
-            if (star + ender_key in {"*RP", "*RPD"} or not star_ender_lookup):
+            if (star + ender_key in {"*RP", "*RPD"} or not star_ender_lookup or (star + f + ender_key in {"*FB"})):
                 # case 1: if you don't know √
                 # case 2: if you don't do √
                 middle_lookup = MIDDLES[star]
