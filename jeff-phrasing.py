@@ -555,8 +555,8 @@ ENDERS = {
     "RBLD": ("past", " should"),
 
     # RBZ - To show
-    "RBZ": ("present", {None: " show", "3ps": " shows", "present-participle": " showing", "past-participle": " showed"}),
-    "RBDZ": ("past", {None: " showed", "root": " show", "present-participle": " showing", "past-participle": " showed"}),
+    "RBZ": ("present", {None: " show", "3ps": " shows", "present-participle": " showing", "past-participle": " shown"}),
+    "RBDZ": ("past", {None: " showed", "root": " show", "present-participle": " showing", "past-participle": " shown"}),
 
     # RBT - To take
     "RBT": ("present", {None: " take", "3ps": " takes", "present-participle": " taking", "past-participle": " taken"}),
@@ -617,6 +617,10 @@ ENDERS = {
     "RBGT": ("present", {None: " work on", "3ps": " works on", "present-participle": " working on", "past-participle": " worked on"}),
     "RBGD": ("past", {None: " worked", "root": " work", "present-participle": " working", "past-participle": " worked"}),
     "RBGTD": ("past", {None: " worked on", "root": " work on", "present-participle": " working on", "past-participle": " worked on"}),
+
+    # -RBGZ - To consider
+    "RBGZ": ("present", {None: " consider", "3ps": " considers", "present-participle": " considering", "past-participle": " considered"}),
+    "RBGDZ": ("past", {None: " considered", "root": " consider", "present-participle": " considering", "past-participle": " considered"}),
 }
 
 NEGATIVE_ENDERS = {
