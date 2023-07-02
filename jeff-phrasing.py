@@ -120,6 +120,7 @@ SIMPLE_STARTERS = {
     "SWH": (" when", None),
     "SWHA": (" what", None),
     "STPWHA": (" what if", None),
+    "SKPWH": (" and when", None),
     "SKPWHA": (" and what", None),
     "STKPHA": (" and that", None),
     "SWHR": (" where", None),
@@ -384,6 +385,7 @@ ENDERS = {
 
     # RPBGS - ever
     "RPBGS": ("present", " ever"),
+    "RPBGSZ": ("past", " ever"),
     
     # RPLTS - matter 
     "RPLTS": ("present", {None: " matter", "3ps": " matters"}),
@@ -396,6 +398,10 @@ ENDERS = {
     # PBGS - To keep
     "PBGS": ("present", {None: " keep", "3ps": " keeps", "present-participle": " keeping", "past-participle": " kept"}),
     "PBGSZ": ("past", {None: " kept", "root": " keep", "present-participle": " keeping", "past-participle": " kept"}),
+
+    # PBGZ - To change
+    "PBGZ": ("present", {None: " change", "3ps": " changes", "present-participle": " changing", "past-participle": " changed"}),
+    "PBGDZ": ("past", {None: " changed", "root": " change", "present-participle": " changing", "past-participle": " changed"}),
 
     # PB: To know (that)
     "PB": ("present", {None: " know", "3ps": " knows", "present-participle": " knowing", "past-participle": " known"}),
@@ -594,6 +600,10 @@ ENDERS = {
     # TZ -- Special case
     "TZ": ("present", " used to"),
     "TDZ": ("past", " used to"),
+
+    # BTZ -- Special case
+    "BTZ": ("present", " used to be"),
+    "BTDZ": ("past", " used to be"),
 
     # P: To want (to)
     "P": ("present", {None: " want", "3ps": " wants", "present-participle": " wanted", "past-participle": " wanted"}),
