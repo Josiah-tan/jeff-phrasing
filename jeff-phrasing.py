@@ -409,6 +409,13 @@ ENDERS = {
     "PBD": ("past", {None: " knew", "root": " know", "present-participle": " knowing", "past-participle": " known"}),
     "PBTD": ("past", {None: " knew that", "root": " know that", "present-participle": " knowing that", "past-participle": " known that"}),
 
+    # PBS: To notice (that) 
+    "PBS": ("present", {None: " notice", "3ps": " notices", "present-participle": " noticing", "past-participle": " noticed"}),
+    "PBTS": ("present", {None: " notice that", "3ps": " notices that", "present-participle": " noticing that", "past-participle": " noticed that"}),
+    "PBTD": ("past", {None: " noticed", "root": " know", "present-participle": " noticing", "past-participle": " noticed"}),
+    "PBTSDZ": ("past", {None: " noticed that", "root": " notice that", "present-participle": " noticing that", "past-participle": " noticing that"}),
+
+
     # RPBS - To learn (to)
     "RPBS": ("present", {None: " learn", "3ps": " learns", "present-participle": " learning", "past-participle": " learned"}),
     "RPBTS": ("present", {None: " learn to", "3ps": " learns to", "present-participle": " learning to", "past-participle": " learned to"}),
