@@ -389,11 +389,11 @@ ENDERS = {
     
     # RPLTS - matter 
     "RPLTS": ("present", {None: " matter", "3ps": " matters"}),
-    "RPLTSDZ": ("past",  " mattered"),
+    "RPLTSDZ": ("past",  {None: " mattered", "root": " matter", "present-participle": " matter", "past-participle": " mattered"}),
 
     # recollect
     "RBLGS": ("present", {None: " recollect", "3ps": " recollects", "present-participle": " recollecting", "past-participle": " recollected"}),
-    "RBLGSZ": ("past", " recollected"),
+    "RBLGSZ": ("past", {None: " recollected", "root": " recollect", "present-participle": " recollecting", "past-participle": " recollected"}),
     
     # PBGS - To keep
     "PBGS": ("present", {None: " keep", "3ps": " keeps", "present-participle": " keeping", "past-participle": " kept"}),
@@ -412,7 +412,7 @@ ENDERS = {
     # PBS: To notice (that) 
     "PBS": ("present", {None: " notice", "3ps": " notices", "present-participle": " noticing", "past-participle": " noticed"}),
     "PBTS": ("present", {None: " notice that", "3ps": " notices that", "present-participle": " noticing that", "past-participle": " noticed that"}),
-    "PBTD": ("past", {None: " noticed", "root": " know", "present-participle": " noticing", "past-participle": " noticed"}),
+    "PBSZ": ("past", {None: " noticed", "root": " notice", "present-participle": " noticing", "past-participle": " noticed"}),
     "PBTSDZ": ("past", {None: " noticed that", "root": " notice that", "present-participle": " noticing that", "past-participle": " noticing that"}),
 
 
