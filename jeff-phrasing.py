@@ -443,9 +443,9 @@ ENDERS = {
     "PBLDZ": ("past", " only"),
 
     # BLG - To like (to)
-    "BLG": ("present", {None: " like", "3ps": " likes", "present-participle": " liking", "past-participle": " liked"}),
+    "BLG": ("present", {None: " like", "3ps": " likes", "present-participle": " like", "past-participle": " liked"}),
     "BLGT": ("present", {None: " like to", "3ps": " likes to", "present-participle": " liking to", "past-participle": " liked to"}),
-    "BLGD": ("past", {None: " liked", "root": " like", "present-participle": " liking", "past-participle": " liked"}),
+    "BLGD": ("past", {None: " liked", "root": " like", "present-participle": " like", "past-participle": " liked"}),
     "BLGTD": ("past", {None: " liked to", "root": " like to", "present-participle": " liking to", "past-participle": " liked to"}),
 
     # LZ - To live
