@@ -57,6 +57,7 @@ THERE_SUFFIXES = {
     "PBLGS": True, "PBLGTS": True,                            # Must (have)
     "PBLGSZ": True, "PBLGTSDZ": True,                         # Just 
     "RPG": True, "RPGD": True, "RPGT": True, "RPGTD": True,   # Need (to)
+    "RLGZ": True, "RLGDZ": True,                              # Always
     "RLG": True, "RLGD": True,                                # Really
     "PLS": True, "PLSZ": True, "PLTS": True, "PLTSDZ": True,  # Seem (to)
     "Z": True, "DZ": True, "TZ": True, "TDZ": True,           # Use (to)
