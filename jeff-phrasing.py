@@ -639,6 +639,23 @@ ENDERS = {
     # -RBGZ - To consider
     "RBGZ": ("present", {None: " consider", "3ps": " considers", "present-participle": " considering", "past-participle": " considered"}),
     "RBGDZ": ("past", {None: " considered", "root": " consider", "present-participle": " considering", "past-participle": " considered"}),
+    
+    "BLTS": ("present", {
+        None: " are able to",
+        "root": " be able to",
+        "1ps": " am able to",
+        "3ps": " is able to",
+        "present-participle": " being able to",
+        "past-participle": " been able to",
+    }),
+    "BLTSDZ": ("past", {
+        None: " were able to",
+        "root": " be able to",
+        "1ps": " was able to",
+        "3ps": " was able to",
+        "present-participle": " being able to",
+        "past-participle": " been able to",
+    }),
 }
 
 NEGATIVE_ENDERS = {
