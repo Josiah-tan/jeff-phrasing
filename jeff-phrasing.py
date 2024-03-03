@@ -110,6 +110,7 @@ STARTERS = {
 
 SIMPLE_STARTERS = {
     # "^S": (" as", None),
+    "STPR": (" for", None),
     "SKPWHR": (" before", None),
     "WHRAO": (" whether or not", None),
     "STHA": (" that", None),
